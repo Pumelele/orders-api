@@ -37,4 +37,18 @@ async function getOrder(req, res, next) {
   }
 }
 
-module.exports = { createOrder, getOrder };
+//Get /order/list function
+
+async function listOrders(req, res, next) {
+  try {
+    const orders = await Order.find().lean();
+    return res.status(200).json(orders);
+  } catch (err) {
+    return next(err);
+  }
+}
+
+module.exports = { createOrder, getOrder, listOrders
+
+    
+ };

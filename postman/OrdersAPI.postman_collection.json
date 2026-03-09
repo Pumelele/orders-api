@@ -344,6 +344,81 @@
 					"body": "{\n    \"_id\": \"69af0173b049f0a3b6b04127\",\n    \"orderId\": \"v10089017vdb\",\n    \"value\": 10000,\n    \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n    \"items\": [\n        {\n            \"productId\": 2436,\n            \"quantity\": 1,\n            \"price\": 1000\n        }\n    ],\n    \"createdAt\": \"2026-03-09T17:20:51.054Z\",\n    \"updatedAt\": \"2026-03-09T17:20:51.054Z\",\n    \"__v\": 0\n}"
 				}
 			]
+		},
+		{
+			"name": "List orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/order/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List orders - 200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1030"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"406-bixfjFtkU1A+aSyz+7DVjGcADSc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Mar 2026 20:31:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"69ae8907ad391a1fe7c41622\",\n        \"orderId\": \"v10089015vdb\",\n        \"value\": 10000,\n        \"creationDate\": \"2023-07-19T12:24:11.529Z\",\n        \"items\": [\n            {\n                \"productId\": 2434,\n                \"quantity\": 1,\n                \"price\": 1000\n            }\n        ],\n        \"createdAt\": \"2026-03-09T08:47:03.137Z\",\n        \"updatedAt\": \"2026-03-09T08:47:03.137Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69af0173b049f0a3b6b04127\",\n        \"orderId\": \"v10089017vdb\",\n        \"value\": 10000,\n        \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n        \"items\": [\n            {\n                \"productId\": 2436,\n                \"quantity\": 1,\n                \"price\": 1000\n            }\n        ],\n        \"createdAt\": \"2026-03-09T17:20:51.054Z\",\n        \"updatedAt\": \"2026-03-09T17:20:51.054Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69af036ab049f0a3b6b0412e\",\n        \"orderId\": \"v10089016vdb\",\n        \"value\": 10000,\n        \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n        \"items\": [\n            {\n                \"productId\": 2436,\n                \"quantity\": 1,\n                \"price\": 1000\n            }\n        ],\n        \"createdAt\": \"2026-03-09T17:29:14.468Z\",\n        \"updatedAt\": \"2026-03-09T17:29:14.468Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69af0411b049f0a3b6b04130\",\n        \"orderId\": \"v1008s9016vdb\",\n        \"value\": 10000,\n        \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n        \"items\": [\n            {\n                \"productId\": 2436,\n                \"quantity\": 1,\n                \"price\": 1000\n            }\n        ],\n        \"createdAt\": \"2026-03-09T17:32:01.569Z\",\n        \"updatedAt\": \"2026-03-09T17:32:01.569Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
 		}
 	]
 }
