@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "9dbac541-5d42-41e4-8af9-575a659b54d5",
+		"name": "OrdersAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36188386"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroPedido\": \"v10089017vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2024-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": null,
+							"description": "Create order. Expected responses: 201, 400,409"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Order- 409 conflict",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroPedido\": \"v10089017vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2024-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"description": "Create order. Expected responses: 201, 400,409"
+								}
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-TDzdqK+bZ5LmhaTfRpYlRKvD5VU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Mar 2026 17:24:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order with this orderId already exists\"\n}"
+				},
+				{
+					"name": "Create Order - 201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroPedido\": \"v10089016vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2024-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"description": "Create order. Expected responses: 201, 400,409"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-rjKTTEMpUUOZ3E6wbZuds0tDkbw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Mar 2026 17:29:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"orderId\": \"v10089016vdb\",\n    \"value\": 10000,\n    \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n    \"items\": [\n        {\n            \"productId\": 2436,\n            \"quantity\": 1,\n            \"price\": 1000\n        }\n    ],\n    \"_id\": \"69af036ab049f0a3b6b0412e\",\n    \"createdAt\": \"2026-03-09T17:29:14.468Z\",\n    \"updatedAt\": \"2026-03-09T17:29:14.468Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Create Order - 400 Bad Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroPedido\": \"v1008s9016vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"202s4-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"description": "Create order. Expected responses: 201, 400,409"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-nB4x7rr+DHDkVXAoO0vpi2IhUuk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Mar 2026 17:32:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid creationDate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numeroPedido\": \"v10089017vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2024-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/v10089017vdb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"v10089017vdb"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Order - 200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroPedido\": \"v10089017vdb-25\",\r\n  \"valorTotal\": 10000,\r\n  \"dataCriacao\": \"2024-07-19T12:24:11.5299601+00:00\",\r\n  \"items\": [\r\n    { \"idItem\": \"2436\", \"quantidadeItem\": 1, \"valorItem\": 1000 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order/v10089017vdb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"v10089017vdb"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-AgyCdWBuY95swpW/XAHqB2ovUAs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Mar 2026 17:26:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"69af0173b049f0a3b6b04127\",\n    \"orderId\": \"v10089017vdb\",\n    \"value\": 10000,\n    \"creationDate\": \"2024-07-19T12:24:11.529Z\",\n    \"items\": [\n        {\n            \"productId\": 2436,\n            \"quantity\": 1,\n            \"price\": 1000\n        }\n    ],\n    \"createdAt\": \"2026-03-09T17:20:51.054Z\",\n    \"updatedAt\": \"2026-03-09T17:20:51.054Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}

@@ -12,6 +12,8 @@ cat > README.md << 'EOF'
 3. Run:
    npm run dev
 
+4. Import postman collection from "postman/...json
+
 ## Endpoints
 - POST /order
 - GET /order/:orderId
