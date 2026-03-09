@@ -1,0 +1,18 @@
+cat > README.md << 'EOF'
+# Orders API (Node.js + Express + MongoDB Atlas)
+
+## Setup
+1. Install dependencies:
+   npm install
+
+2. Create a .env file:
+   PORT=3000
+   MONGODB_URI=your_mongodb_atlas_connection_string
+
+3. Run:
+   npm run dev
+
+## Endpoints
+- POST /order
+- GET /order/:orderId
+EOF
